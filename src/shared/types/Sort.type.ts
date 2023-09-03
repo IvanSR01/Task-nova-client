@@ -1,0 +1,1 @@
+export type TypeSort = 'title' | 'deadline' | 'priority'

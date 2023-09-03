@@ -1,0 +1,50 @@
+@import url('../../assets/global.scss');
+
+.wrapper {
+	padding: 70px 50px;
+	width: 1600px;
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+		.input {
+			width: 1000px;
+			box-shadow: 0 0px 20px var(--shadow);
+		}
+		select {
+			color: #000;
+		}
+	}
+
+	.items {
+		padding-left: 50px;
+		margin-top: 50px;
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		.h2{
+			font-size: 30px;
+			color: var(--color);
+		}
+	}
+
+	.hist {
+		padding-bottom: 40px;
+		border-bottom: 2px solid var(--color);
+		margin-top: 50px;
+		font-size: 40px;
+		font-weight: bold;
+		margin-left: 40px;
+		color: var(--color);
+	}
+
+	.add {
+		position: fixed;
+		bottom: 100px;
+		right: 100px;
+		svg {
+			font-size: 20px;
+		}
+	}
+}

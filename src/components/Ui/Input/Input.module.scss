@@ -1,0 +1,35 @@
+@import url('../../../assets/global.scss');
+
+.inputGroup {
+	display: flex;
+	flex-wrap: wrap;
+	.input {
+		height: 72px;
+		border-radius: 10px;
+		box-sizing: border-box;
+		padding: 10px 20px;
+		font-size: 20px;
+		outline: 2px solid transparent;
+		border: none;
+		background-color: var(--input-color);
+		color: var(--color);
+		transition: outline 1s;
+	}
+	.input:focus {
+		outline: 2px solid #00d8fe;
+	}
+	.input::placeholder {
+		color: #027e94;
+	}
+	.error{
+		outline: 2px solid rgb(213, 0, 0);
+	}
+	.error::placeholder {
+		color: rgb(213, 0, 0);
+	}
+	label{
+		margin-top: 10px;
+		color: rgb(213, 0, 0);
+		font-weight: bold;
+	}
+}

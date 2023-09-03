@@ -1,0 +1,9 @@
+.wrapper {
+	margin-top: 20px;
+	padding: 0px 20px;
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+}

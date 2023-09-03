@@ -1,0 +1,8 @@
+@import url('../../assets/global.scss');
+
+.wrapper{
+	min-height: 100vh;
+	background: var(--background-color);
+	color: #fff;
+	display: flex;
+}

@@ -1,0 +1,28 @@
+@import url('../../../assets/global.scss');
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	color: var(--color);
+	text-decoration: none;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding: 0px 20px;
+	width: 200px;
+	border-radius: 10px;
+	transition: background-color 0.5s;
+	svg{
+		font-size: 25px;
+	}
+	p {
+		text-align: left;
+		font-weight: bold;
+	}
+}
+.wrapper:hover {
+	background-color: var(--active-nav);
+}
+.active {
+	background-color: var(--active-nav);
+}

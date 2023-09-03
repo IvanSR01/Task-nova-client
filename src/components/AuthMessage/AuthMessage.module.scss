@@ -1,0 +1,18 @@
+@import url('../../assets/global.scss');
+.wrapper {
+	height: 550px;
+	width: 420px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 40px;
+	background-color: var(--background-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	>div {
+		text-align: center;
+		>h2{
+			font-size: 40px;
+		}
+	}
+}

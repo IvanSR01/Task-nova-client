@@ -1,0 +1,17 @@
+@import url('../../../assets/global.scss');
+
+.wrapper{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 16px;
+	border-radius: 10px;
+	gap: 10px;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+.active{
+	background-color: var(--background-color);
+}

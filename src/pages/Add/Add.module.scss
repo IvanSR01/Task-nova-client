@@ -1,0 +1,27 @@
+.wrapper{
+	color: var(--color);
+	padding: 100px;
+	
+	.row__one {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 1400px;
+		gap: 50px;
+		input{
+			width: 500px;
+		}
+	}
+	.row__two {
+		margin-top: 70px;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
