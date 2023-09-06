@@ -1,16 +1,22 @@
 import instance from '../config/axios.config'
-import { ITask } from '../shared/interfaces/Task.interface'
+import { ITask, IAllTask } from '../shared/interfaces/Task.interface'
 import { TypeCreateTask } from '../shared/types/CreateTask.type'
 
 const TASK = '/task/'
 
 class TaskService {
+
+	async getAll(){
+		const { data } = await instance<IAllTask | undefined>({
+			url: `${TASK}all`,
+			method:'get'
+		})
+		return data
+	}
+
 	async getById(id: string) {
 		return await instance<ITask>({
-			url: `${TASK}`,
-			params: {
-				id
-			},
+			url: `${TASK}${id}`,
 			method: 'get'
 		})
 	}
@@ -26,11 +32,12 @@ class TaskService {
 			}
 		})
 	}
-	async update({ title, content, priority, deadline }: TypeCreateTask) {
+	async update({ taskId, title, content, priority, deadline }: TypeCreateTask) {
 		return await instance<ITask>({
 			url: `${TASK}`,
 			method: 'put',
 			data: {
+				taskId,
 				title,
 				content,
 				priority,

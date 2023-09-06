@@ -11,3 +11,7 @@ export interface ITask {
 
 	deadline: string
 }
+export interface IAllTask {
+	task: ITask[]
+	history: ITask[]
+}

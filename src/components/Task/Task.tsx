@@ -6,6 +6,7 @@ import { useMutation } from '@tanstack/react-query'
 import TaskService from '../../services/Task.service'
 import { CircularProgress } from '@mui/material'
 import { IoPencilSharp, IoRemoveCircle } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 const Task: FC<ITaskUI> = ({
 	priority,
 	title,
@@ -49,8 +50,10 @@ const Task: FC<ITaskUI> = ({
 					<p>{content}</p>
 					<div className={styles.header}>
 						<div>deadLine - {deadline}</div>
-						<IoPencilSharp />
-						<IoRemoveCircle onClick={() => removeOnClick()}/>
+						<Link to={isCompleted ? '' : `/update/${_id}`}>
+							<IoPencilSharp />
+						</Link>
+						<IoRemoveCircle onClick={() => removeOnClick()} />
 					</div>
 				</div>
 			)}

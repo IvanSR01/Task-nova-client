@@ -1,5 +1,3 @@
-import { ITask } from './Task.interface'
-
 export interface ITokens {
 	accessToken: string
 	refreshToken: string
@@ -11,10 +9,15 @@ export interface IUser extends ITokens {
 	img: string
 	target: string
 	days: number
-	task: ITask[]
-	history: ITask[]
 }
 
 export interface IInitialState {
 	user: IUser | null
+}
+
+export interface IUserUpdate {
+	email?: string
+	userName?: string
+	img?: string
+	target?: string
 }

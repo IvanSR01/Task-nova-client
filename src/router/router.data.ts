@@ -2,8 +2,10 @@ import { FC } from 'react'
 import Home from '../pages/Home/Home'
 import SingIn from '../pages/Sing In/SingIn'
 import SingUp from '../pages/Sing Up/SingUp'
-import User from '../pages/User/User'
-import Add from '../pages/Add/Add'
+import User from '../pages/Us/User/User'
+import Add from '../pages/Task/Add/Add'
+import UpdateUser from '../pages/Us/UpdateUser/UpdateUser'
+import Update from '../pages/Task/Update/Update'
 
 export type TypeRouterData = {
 	path: string
@@ -28,9 +30,18 @@ const RouterData: TypeRouterData[] = [
 		element: User
 	},
 	{
+		path: '/user/update',
+		element: UpdateUser
+	},
+	{
 		path: '/add',
 		element: Add
+	},
+	{
+		path: '/update/:id',
+		element: Update
 	}
+
 ]
 
 export default RouterData

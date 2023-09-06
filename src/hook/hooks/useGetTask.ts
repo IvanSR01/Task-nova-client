@@ -1,14 +1,21 @@
-import { useAppSelector } from '..'
 import { TypeSort } from '../../shared/types/Sort.type'
-import { ITask } from '../../shared/interfaces/Task.interface'
+import { IAllTask, ITask } from '../../shared/interfaces/Task.interface'
+import { useQuery } from '@tanstack/react-query'
+import TaskService from '../../services/Task.service'
 const useGetTask = (sort: TypeSort, search: string) => {
-	const user = useAppSelector(state => state.User.user)
+	const { data, isLoading } = useQuery(['AllTask'], () => TaskService.getAll())
 
-	if (!user) return
+	if (!data) return
 
-	const tasks = useSearchFilter(search, user?.task)
+	const tasks = useSearchFilter(search, data?.task)
 
-	return useFilterTask(sort, tasks)
+
+	const AllTask: IAllTask = {
+		task: useFilterTask(sort, tasks),
+		history: data.history,
+	}
+
+	return AllTask
 }
 
 const useFilterTask = (sort: TypeSort, task: ITask[]) => {

@@ -10,9 +10,7 @@ import { useAppSelector, useGetTask } from '../../hook'
 const Home: FC = () => {
 	const [value, setValue] = useState('')
 	const sortCount = useAppSelector(state => state.Filter.sortCount)
-	const Tasks = useGetTask(items[sortCount].sort, value)
-	const user = useAppSelector(state => state.User.user)
-	console.log(Tasks)
+	const allTask = useGetTask(items[sortCount].sort, value)
 	return (
 		<Layout title='TaskNova | Home'>
 			<div className={styles.wrapper}>
@@ -26,17 +24,17 @@ const Home: FC = () => {
 					<Select Items={items} />
 				</header>
 				<div className={styles.items}>
-					{Tasks && Tasks.length ? (
-						Tasks.map((item: ITask, i: number) => <Task key={i} {...item} />)
+					{allTask?.task && allTask.task.length ? (
+						allTask.task.map((item: ITask, i: number) => <Task key={i} {...item} />)
 					) : (
 						<h2 className={styles.h2}>There are no tasks</h2>
 					)}
 				</div>
-				{user?.history && user?.history.length ? (
+				{allTask?.history && allTask.history.length ? (
 					<>
 						<div className={styles.hist}>History</div>
 						<div className={styles.items}>
-							{user.history.map((item: ITask, i: number) => (
+							{allTask.history.map((item: ITask, i: number) => (
 								<Task key={i} {...item} />
 							))}
 						</div>
