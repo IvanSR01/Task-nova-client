@@ -3,12 +3,12 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	height: 800px;
-	width: 500vh;
+	min-height: 800px;
+	width: 80vw;
 	color: var(--color);
 	.content {
 		background-color: var(--background);
-		width: 600px;
+		width: 30vw;
 		height: 140px;
 		border-radius: 20px;
 		.img {
@@ -26,7 +26,7 @@
 			display: flex;
 			gap: 20px;
 			justify-content: center;
-			> div{
+			> div {
 				margin-top: 20px;
 				text-align: center;
 				font-size: 20px;
@@ -40,21 +40,20 @@
 				}
 			}
 		}
-
 	}
 	.items {
-		margin: 0;
-		width: 990px;
+		width: 60vw;
 		display: flex;
 		justify-content: center;
 		gap: 20px;
 		flex-wrap: wrap;
-		.h2{
+		.h2 {
 			margin-left: 100px;
 			font-size: 30px;
 			color: var(--color);
 		}
 		.hist {
+			margin: 50px;
 			border-bottom: 2px solid var(--color);
 			font-size: 40px;
 			font-weight: bold;

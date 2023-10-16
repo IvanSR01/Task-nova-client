@@ -1,12 +1,12 @@
 .wrapper{
 	color: var(--color);
 	padding: 100px;
-	
+	width: 70vw;
 	.row__one {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		width: 1400px;
+		// width: 50vw;
 		gap: 50px;
 		input{
 			width: 500px;

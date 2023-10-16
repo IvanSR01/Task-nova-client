@@ -2,14 +2,20 @@
 
 .wrapper {
 	padding: 70px 50px;
-	width: 1600px;
+	width: 80vw;
 	header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 100px;
+		@media (min-width: 1000px) and (max-width:1200px) {
+			gap: 50px;
+		}
+		@media (min-width: 1201px) and (max-width:1600px) {
+			gap: 50px;
+		}
 		.input {
-			width: 1000px;
+			width: 50vw;
 			box-shadow: 0 0px 20px var(--shadow);
 		}
 		select {
